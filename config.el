@@ -113,16 +113,3 @@
   :hook (company-mode . company-posframe-mode))
 
 ;; UI settings
-;; (setq doom-theme 'nil)
-;; (require 'disp-table)
-;; (require 'nano-theme-dark)
-;; (require 'nano-help)
-;; (require 'nano-layout)
-;; (require 'nano-modeline)
-;; (require 'nano-faces)
-;; (require 'nano-colors)
-;; (require 'nano-theme)
-;; (require 'nano-defaults)
-;; (nano-faces)
-;; (nano-theme)
-;; (nano-defaults)
