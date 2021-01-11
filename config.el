@@ -12,9 +12,9 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/OneDrive/Notes/OrgRoam/")
+;;(setq org-directory "~/OneDrive/Notes/OrgRoam/")
 
-(setq org-roam-directory "~/OneDrive/Notes/OrgRoam/")
+;;(setq org-roam-directory "~/OneDrive/Notes/OrgRoam/")
 
 
 ;; Here are some additional functions/macros that could help you configure Doom:
@@ -36,7 +36,7 @@
 
 (use-package! sis
   :config
-  (sis-ism-lazyman-config "1033" "2052" 'im-select)
+  (sis-ism-lazyman-config "1" "2" 'fcitx5)
   (sis-global-cursor-color-mode t)
   (sis-global-respect-mode t)
   (sis-global-context-mode t)
@@ -93,3 +93,4 @@
 
 ;; custom config files
 (load! "+ui")
+(load! "+keybings")

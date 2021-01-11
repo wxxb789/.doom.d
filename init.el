@@ -27,7 +27,7 @@
        ;;layout            ; auie,ctsrnm is the superior home row
 
        :completion
-       company                    ; the ultimate code completion backend
+       (company +childframe) ; the ultimate code completion backend
        ;;helm              ; the *other* search engine for love and life
        ;;ido               ; the other *other* search engine...
        (ivy
@@ -72,14 +72,15 @@
        ;;objed             ; text object editing for the innocent
        ;; parinfer          ; turn lisp into python, sort of
        ;;rotate-text       ; cycle region at point between text candidates
-       snippets                   ; my elves. They type so I don't have to
+       snippets                   ; my elves . They type so I don't have to
        ;;word-wrap         ; soft wrapping with language-aware indent
 
        :emacs
-       dired       ; making dired pretty [functional]
+       (dired
+        +icons)       ; making dired pretty [functional]
        electric    ; smarter, keyword-based electric-indent
        ;;ibuffer         ; interactive buffer management
-       undo        ; persistent, smarter undo for your inevitable mistakes
+       (undo +tree)        ; persistent, smarter undo for your inevitable mistakes
        vc          ; version-control and Emacs, sitting in a tree
 
        :term
@@ -89,7 +90,8 @@
        ;;vterm             ; the best terminal emulation in Emacs
 
        :checkers
-       (syntax +childframe)   ; tasing you for every semicolon you forget
+       (syntax
+        +childframe)   ; tasing you for every semicolon you forget
        ;;spell             ; tasing you for misspelling mispelling
        ;;grammar           ; tasing grammar mistake every you make
 
@@ -102,9 +104,11 @@
        ;;ein               ; tame Jupyter notebooks with emacs
        (eval +overlay) ; run code, run (also, repls)
        ;;gist              ; interacting with github gists
-       lookup                   ; navigate your code and its documentation
+       (lookup
+        +dictionary
+        +docsets)                   ; navigate your code and its documentation
        lsp
-       magit              ; a git porcelain for Emacs
+       (magit +forge)              ; a git porcelain for Emacs
        make               ; run make tasks from Emacs
        ;;pass              ; password manager for nerds
        ;;pdf               ; pdf enhancements

@@ -22,14 +22,17 @@
 ;; font string. You generally only need these two:
 ;; font settings
 ;; "Iosevka Nerd Font Mono" 
-(setq doom-font (font-spec :family "Iosevka Nerd Font Mono" :size 32)
-      doom-serif-font (font-spec :family "Sarasa Mono Slab SC")
-      doom-variable-pitch-font (font-spec :family "Iosevka Nerd Font Mono")
-      doom-unicode-font (font-spec :family "Sarasa Mono Slab SC")
-      doom-big-font (font-spec :family "Sarasa Mono Slab SC" :size 38))
+(setq doom-font (font-spec :family "Iosevka" :size 32)
+      doom-serif-font (font-spec :family "Sarasa Mono SC Nerd")
+      doom-variable-pitch-font (font-spec :family "Iosevka")
+      doom-unicode-font (font-spec :family "Sarasa Mono SC Nerd")
+      doom-big-font (font-spec :family "Sarasa Mono SC Nerd" :size 38))
 
 (defun win10/set-unicode-fonts ()
   (interactive)
   (set-fontset-font "fontset-default" 'symbol (font-spec :family "Segoe UI Emoji" :size 14) nil 'prepend ))
 
 (add-hook 'window-setup-hook :append 'win10/set-unicode-fonts) ;;言
+
+;; avoid emacs ui lagging
+(setq x-select-enable-clipboard-manager nil)
