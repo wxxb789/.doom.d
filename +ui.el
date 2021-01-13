@@ -22,11 +22,11 @@
 ;; font string. You generally only need these two:
 ;; font settings
 ;; "Iosevka Nerd Font Mono" 
-(setq doom-font (font-spec :family "Iosevka" :size 32)
-      doom-serif-font (font-spec :family "Sarasa Mono SC Nerd")
-      doom-variable-pitch-font (font-spec :family "Iosevka")
-      doom-unicode-font (font-spec :family "Sarasa Mono SC Nerd")
-      doom-big-font (font-spec :family "Sarasa Mono SC Nerd" :size 38))
+(setq doom-font (font-spec :family "Noto Sans Mono CJK SC" :size 32)
+      doom-serif-font (font-spec :family "Noto Sans Mono CJK SC")
+      doom-variable-pitch-font (font-spec :family "Noto Sans Mono CJK SC")
+      doom-unicode-font (font-spec :family "Noto Sans Mono CJK SC")
+      doom-big-font (font-spec :family "Noto Sans Mono CJK SC" :size 38))
 
 (defun win10/set-unicode-fonts ()
   (interactive)
