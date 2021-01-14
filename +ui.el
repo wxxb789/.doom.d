@@ -21,18 +21,25 @@
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
 ;; font settings
-;; "Iosevka Nerd Font Mono" 
-(setq doom-font (font-spec :family "Noto Sans Mono CJK SC" :size 32)
-      doom-serif-font (font-spec :family "Noto Sans Mono CJK SC")
-      doom-variable-pitch-font (font-spec :family "Noto Sans Mono CJK SC")
-      doom-unicode-font (font-spec :family "Noto Sans Mono CJK SC")
-      doom-big-font (font-spec :family "Noto Sans Mono CJK SC" :size 38))
+;; "Iosevka Nerd Font Mono"
 
-(defun win10/set-unicode-fonts ()
-  (interactive)
-  (set-fontset-font "fontset-default" 'symbol (font-spec :family "Segoe UI Emoji" :size 14) nil 'prepend ))
+;; Fix unicode file-icon display error.
+(setq doom-unicode-extra-fonts (delete "file-icons" doom-unicode-extra-fonts))
+(push "Sarasa Mono SC Nerd" doom-unicode-extra-fonts)
 
-(add-hook 'window-setup-hook :append 'win10/set-unicode-fonts) ;;言
+(setq doom-font (font-spec :family "Iosevka" :size 34)
+      doom-serif-font (font-spec :family "Sarasa Mono SC Nerd")
+      doom-variable-pitch-font (font-spec :family "Iosevka")
+      doom-unicode-font (font-spec :family "Sarasa Mono SC Nerd")
+      doom-big-font (font-spec :family "Sarasa Mono SC Nerd" :size 42))
+;;
+;; (setq doom-font (font-spec :family "Sarasa Mono SC" :size 32))
+
+;; (defun win10/set-unicode-fonts ()
+;;   (interactive)
+;;   (set-fontset-font "fontset-default" 'symbol (font-spec :family "Segoe UI Emoji" :size 14) nil 'prepend ))
+
+;; (add-hook 'window-setup-hook :append 'win10/set-unicode-fonts) ;;言
 
 ;; avoid emacs ui lagging
 (setq x-select-enable-clipboard-manager nil)
