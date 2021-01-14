@@ -21,15 +21,28 @@
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
 ;; font settings
-;; "Iosevka Nerd Font Mono" 
-(setq doom-font (font-spec :family "Iosevka Nerd Font Mono" :size 32)
-      doom-serif-font (font-spec :family "Sarasa Mono Slab SC")
-      doom-variable-pitch-font (font-spec :family "Iosevka Nerd Font Mono")
-      doom-unicode-font (font-spec :family "Sarasa Mono Slab SC")
-      doom-big-font (font-spec :family "Sarasa Mono Slab SC" :size 38))
+;; "Iosevka Nerd Font Mono"
+
+;; Fix unicode file-icon display error.
+;; (seq-difference doom-unicode-extra-fonts '("FontAwesome" "file-icons"))
+;; (message doom-unicode-extra-fonts)
+;; (setq doom-unicode-extra-fonts (seq-difference doom-unicode-extra-fonts '("FontAwesome" "file-icons" "github-octicons")))
+
+(setq doom-font (font-spec :family "Sarasa Mono SC" :size 32)
+      doom-serif-font (font-spec :family "Sarasa Mono SC")
+      doom-variable-pitch-font (font-spec :family "Sarasa Mono SC")
+      doom-unicode-font (font-spec :family "Sarasa Mono SC")
+      doom-big-font (font-spec :family "Sarasa Mono SC" :size 38))
 
 (defun win10/set-unicode-fonts ()
   (interactive)
   (set-fontset-font "fontset-default" 'symbol (font-spec :family "Segoe UI Emoji" :size 14) nil 'prepend ))
 
-(add-hook 'window-setup-hook :append 'win10/set-unicode-fonts) ;;言
+;; {{ Windows Conifg Start
+;; set doom-unicode-extra-fonts nil if windows.
+;; 中，言，结构
+(if IS-WINDOWS
+    (setq doom-unicode-extra-fonts nil)
+  (push "Sarasa Mono SC Nerd" doom-unicode-extra-fonts)
+  (add-hook 'window-setup-hook :append 'win10/set-unicode-fonts))
+;;}} Windows Conifg End
