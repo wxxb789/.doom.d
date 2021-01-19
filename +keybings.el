@@ -7,5 +7,7 @@
  :nv ",cc" 'evilnc-copy-and-comment-lines
  ;; :nv ",cl" 'evilnc-quick-comment-or-uncomment-to-the-line
  ;; :nv ",cp" 'my-evilnc-comment-or-uncomment-paragraphs
+ :nv ",/" 'color-rg-search-input
  )
+
 ;; }}
