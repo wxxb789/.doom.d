@@ -69,3 +69,6 @@
 
 ;; (package! nano-emacs
 ;;   :recipe (:host github :repo "rougier/nano-emacs"))
+
+;; (package! snails
+;;   :recipe (:host github :repo "manateelazycat/snails"))

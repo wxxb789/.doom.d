@@ -91,6 +91,19 @@
 (use-package! company-posframe
   :hook (company-mode . company-posframe-mode))
 
+;; (use-package! snails
+;;   :init
+;;   (add-hook 'snails-mode-hook (lambda () (evil-emacs-state)))
+;;   :commands snails)
+
+;; color-rg with evil
+;; https://emacs.stackexchange.com/a/10588/22102
+;; (eval-after-load 'color-rg
+;;   '(progn
+;;      (evil-make-overriding-map color-rg-mode-map 'normal)
+;;      ;; force update evil keymaps after git-timemachine-mode loaded
+;;      (add-hook 'color-rg-mode-hook #'evil-normalize-keymaps)))
+
 ;; custom config files
 (load! "+ui")
 (load! "+keybings")
