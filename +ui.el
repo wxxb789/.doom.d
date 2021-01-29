@@ -28,11 +28,11 @@
 ;; (message doom-unicode-extra-fonts)
 ;; (setq doom-unicode-extra-fonts (seq-difference doom-unicode-extra-fonts '("FontAwesome" "file-icons" "github-octicons")))
 
-(setq doom-font (font-spec :family "Inconsolata NF" :size 36)
+(setq doom-font (font-spec :family "Inconsolata NF" :size 24)
       doom-serif-font (font-spec :family "Sarasa Mono SC")
       doom-variable-pitch-font (font-spec :family "Inconsolata NF")
       doom-unicode-font (font-spec :family "Sarasa Mono SC")
-      doom-big-font (font-spec :family "Sarasa Mono SC" :size 42))
+      doom-big-font (font-spec :family "Sarasa Mono SC" :size 32))
 
 (defun win10/set-unicode-fonts ()
   (interactive)

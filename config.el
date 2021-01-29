@@ -91,5 +91,13 @@
 (use-package! company-posframe
   :hook (company-mode . company-posframe-mode))
 
+(setq snails-path (expand-file-name ".local/straight/repos/snails" doom-emacs-dir))
+(use-package! snails
+  :load-path snails-path
+  :init (add-hook 'snails-mode-hook (lambda () (evil-emacs-state)))
+  :commands snails)
+
 ;; custom config files
+;;
 (load! "+ui")
+(load! "+keybindings")
