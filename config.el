@@ -110,4 +110,4 @@
 
 ;; custom config files
 (load! "+ui")
-(load! "+keybings")
+(load! "+keybindings")
