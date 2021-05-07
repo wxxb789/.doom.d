@@ -12,9 +12,9 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/OneDrive/Notes/OrgRoam/")
+(setq org-directory "D:\\OneDrive\\Personal\\OneDrive\\Notes\\OrgRoam")
 
-(setq org-roam-directory "~/OneDrive/Notes/OrgRoam/")
+(setq org-roam-directory "D:\\OneDrive\\Personal\\OneDrive\\Notes\\OrgRoam")
 
 
 ;; Here are some additional functions/macros that could help you configure Doom:
@@ -45,7 +45,7 @@
 
 (use-package! evil-escape
   :init
-  (setq evil-escape-key-sequence "kj"))
+  (setq evil-escape-key-sequence "df"))
 
 (use-package! markdown-mode
   :ensure t
