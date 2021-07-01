@@ -57,15 +57,15 @@
 (package! easy-kill)
 (package! org-clock-convenience)
 (package! company-posframe)
-(package! org-roam
-  :recipe (:host github :repo "org-roam/org-roam"))
-(package! company-org-roam
-  :recipe (:host github :repo "jethrokuan/company-org-roam"))
+;;(package! org-roam
+;;  :recipe (:host github :repo "org-roam/org-roam"))
+;;(package! company-org-roam
+;;  :recipe (:host github :repo "jethrokuan/company-org-roam"))
 (package! org-download)
 (package! git-link)
 (package! yaml-mode)
-(package! org-roam-server
-  :recipe (:host github :repo "org-roam/org-roam-server"))
+;;(package! org-roam-server
+;;  :recipe (:host github :repo "org-roam/org-roam-server"))
 
 ;; (package! nano-emacs
 ;;   :recipe (:host github :repo "rougier/nano-emacs"))
