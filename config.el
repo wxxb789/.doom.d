@@ -16,6 +16,8 @@
 
 (setq org-roam-directory "D:\\OneDrive\\Personal\\OneDrive\\Notes\\OrgRoam")
 
+;; Try fix org-roam-db-update-cache-on-timer issue
+(setq org-roam-db-update-method 'immediate)
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
